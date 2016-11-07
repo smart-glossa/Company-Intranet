@@ -35,12 +35,11 @@ public class regiaterServlet extends HttpServlet {
 		if (operation.equals("add")) {
 			String Emailaddress = request.getParameter("Emailaddress");
 			String password = request.getParameter("password");
-			String content = request.getParameter("content");
+			String Comment = request.getParameter("Coment");
 			JSONObject result;
 			try {
-				result = RegObject.Register(Emailaddress, password, content);
+				result = RegObject.Register(Emailaddress, password, Comment);
 				response.getWriter().print(result);
-
 				
 			} catch (JSONException e) {
 

@@ -9,14 +9,14 @@ import org.json.JSONObject;
 
 public class registerClass {
 
-	public JSONObject Register( String Emailaddress, String password, String content ) throws JSONException {
+	public JSONObject Register( String Emailaddress, String password, String Comment) throws JSONException {
         JSONObject result = new JSONObject();
         try {
             Class.forName("com.mysql.jdbc.Driver");
             Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/company", "root", "root");
             Statement statement = connection.createStatement();
             String query = "insert into register (Emailaddress,password,content) values (" + Emailaddress +"', '" + password + 
-            		"','" + content +"')"; 
+            		"','" + Comment +"')"; 
             statement.execute(query);
             result.put("Status", "1");
             
