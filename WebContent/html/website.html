@@ -1,0 +1,75 @@
+<html>
+<head>
+<script>
+function website(){
+
+	var maindiv=document.createElement("div");
+	document.body.appendChild(maindiv);
+
+	
+	 var titdiv=document.createElement("div");
+	 titdiv.setAttribute("class","head");
+	 maindiv.appendChild(titdiv);
+	  
+	  var ul=document.createElement("UL");
+	  titdiv.appendChild(ul);
+
+	  var list=document.createElement("li");
+	  var listnode=document.createElement("img");
+	  listnode.setAttribute("src","12.png");
+	  list.appendChild(listnode);
+	  ul.appendChild(list);
+
+
+
+	  var titdiv1=document.createElement("div");
+	 titdiv1.setAttribute("class","head");
+	 maindiv.appendChild(titdiv1);
+
+var b1=document.createElement("img");
+    b1.setAttribute("id","str");
+	b1.setAttribute("src","2.png");
+	titdiv1.appendChild(b1);
+
+var b2=document.createElement("img");
+    b2.setAttribute("id","st");
+	b2.setAttribute("src","4.png");
+	titdiv1.appendChild(b2);
+
+	var titdiv2=document.createElement("div");
+	 titdiv2.setAttribute("class","head");
+	 maindiv.appendChild(titdiv2);
+
+
+	var blue=document.createElement("img");
+    blue.setAttribute("id","");
+	blue.setAttribute("src","7.png");
+	var text=document.createElement("Build a personalized team intranet");
+	blue.appendChild(text);
+	titdiv2.appendChild(blue);
+
+
+
+}
+
+</script>
+<style type="text/css">
+	body{
+		background-image: url("6.jpg");
+		background-repeat: no-repeat;
+		height:900px; 
+		width: 640px;
+	
+	}
+	#str{
+		margin-left: 150px;
+	}
+	#st{
+		margin-left: 120px;
+	}
+
+</style>
+</head>
+<body onload="website()">
+</body>
+</html>
