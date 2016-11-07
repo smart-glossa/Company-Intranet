@@ -7,6 +7,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
+
 /**
  * Servlet implementation class regiaterServlet
  */
@@ -26,9 +30,29 @@ public class regiaterServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
-	}
+		String operation = request.getParameter("operation");
+		registerClass RegObject = new registerClass();
+		if (operation.equals("add")) {
+			String Emailaddress = request.getParameter("Emailaddress");
+			String password = request.getParameter("password");
+			String content = request.getParameter("content");
+			JSONObject result;
+			try {
+				result = RegObject.Register(Emailaddress, password, content);
+				response.getWriter().print(result);
+
+				
+			} catch (JSONException e) {
+
+				e.printStackTrace();
+				
+			}
+				
+			}
+		}
+		
+		
+	
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
