@@ -6,7 +6,6 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -18,9 +17,7 @@ import org.json.JSONObject;
 public class regiaterServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
+   
     public regiaterServlet() {
         super();
         // TODO Auto-generated constructor stub
@@ -34,11 +31,11 @@ public class regiaterServlet extends HttpServlet {
 		registerClass RegObject = new registerClass();
 		if (operation.equals("add")) {
 			String Emailaddress = request.getParameter("Emailaddress");
-			String password = request.getParameter("password");
-			String Comment = request.getParameter("Coment");
+			String Password = request.getParameter("Password");
+			String Comment = request.getParameter("Comment");
 			JSONObject result;
 			try {
-				result = RegObject.Register(Emailaddress, password, Comment);
+				result = RegObject.Register(Emailaddress, Password, Comment);
 				response.getWriter().print(result);
 				
 			} catch (JSONException e) {
@@ -48,6 +45,20 @@ public class regiaterServlet extends HttpServlet {
 			}
 				
 			}
+		if (operation.equals("login")) {
+			JSONObject result = new JSONObject();
+			String Emailaddress = request.getParameter("Emailaddress");
+			String Password = request.getParameter("Password");
+		
+			try{
+				result=RegObject.login(Emailaddress, Password);
+				response.getWriter().print("result");
+			}
+			catch
+				(JSONException e){
+				e.printStackTrace();
+			}
+		}
 		}
 		
 		
