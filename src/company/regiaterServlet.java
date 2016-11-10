@@ -30,12 +30,12 @@ public class regiaterServlet extends HttpServlet {
 		String operation = request.getParameter("operation");
 		registerClass RegObject = new registerClass();
 		if (operation.equals("add")) {
-			String Emailaddress = request.getParameter("Emailaddress");
-			String Password = request.getParameter("Password");
-			String Comment = request.getParameter("Comment");
+			String EmailAddress = request.getParameter("EmailAddress");
+			String pass = request.getParameter("pass");
+			String comments = request.getParameter("comments");
 			JSONObject result;
 			try {
-				result = RegObject.Register(Emailaddress, Password, Comment);
+				result = RegObject.Register(EmailAddress, pass, comments);
 				response.getWriter().print(result);
 				
 			} catch (JSONException e) {
@@ -47,8 +47,8 @@ public class regiaterServlet extends HttpServlet {
 			}
 		if (operation.equals("login")) {
 			JSONObject result = new JSONObject();
-			String Emailaddress = request.getParameter("Emailaddress");
-			String Password = request.getParameter("Password");
+			String Emailaddress = request.getParameter("EmailAddress");
+			String Password = request.getParameter("pass");
 		
 			try{
 				result=RegObject.login(Emailaddress, Password);
