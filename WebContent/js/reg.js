@@ -27,7 +27,7 @@ function deside(){
     
      var tabledata=document.createElement("td");
     var inp1 = document.createElement("input");
-    inp1.id = 'Name';
+    inp1.id = 'EmailAddress';
     inp1.className = 'textbox';
     tabledata.appendChild(inp1);
    tablerow.appendChild(tabledata);
@@ -48,9 +48,9 @@ function deside(){
 
 var tabledata=document.createElement("td");
     var inp2 = document.createElement("input");
-    inp2.id = 'Address';
+    inp2.id = 'pass';
     inp2.className = 'textbox';
-    inp2.type = 'text';
+    inp2.type = 'password';
     tabledata.appendChild(inp2);
     tablerow.appendChild(tabledata);
 
@@ -71,7 +71,7 @@ var tabledata=document.createElement("td");
 
 var tabledata=document.createElement("td");
     var inp3 = document.createElement("input");
-    inp3.id = 'Address';
+    inp3.id = 'comments';
     inp3.className = 'textbox';
     inp3.type = 'text';
     tabledata.appendChild(inp3);
@@ -89,6 +89,7 @@ var tabledata=document.createElement("td");
       var tabledata=document.createElement("td");
     var la3 = document.createElement("button");
     la3.setAttribute("class","signup-button");
+     la3.setAttribute("id","reg");
     var la3Value = document.createTextNode("start my free trial");
 
     la3.appendChild(la3Value);

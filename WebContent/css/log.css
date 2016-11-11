@@ -4,9 +4,9 @@ body{
 }
 .main{
 	
-	background-image: url("../images/14.jpg"); 
+	background-image: url("../images/15.png"); 
 	height: 150px;
-	opacity: 0.6;
+	
 }
 img{
 	margin-left: 70px;
@@ -23,7 +23,7 @@ img{
     border-radius: 05px;
 
 }
-p{
+.p2{
 	font-size: 30px;
 	 margin-left: 30px;
 }
@@ -35,6 +35,10 @@ input{
 	margin-left: 15px;
 	width:240px;
 	height: 35px;
+}
+.rd{
+	margin-top: 130px;
+	 margin-left: 390px;
 }
 .tb{
 	float: right;
